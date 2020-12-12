@@ -44,3 +44,22 @@ en:
        teams_desc: This is where you can access all the teams, and find details about them
        universities_header: Universities
        universities_desc: This is where you can see a list of all the universities competing and can see their details
+    contact:
+      title: Contact Us
+      contact_us: Complete the following form to get in touch with us.
+      name: "Name:"
+      enter_name: Enter your name
+      name_placeholder: Your name...
+      email: "Email:"
+      enter_email: Enter your email address
+      email_placeholder: Your email...
+      telephone: "Telephone:"
+      enter_telephone: Enter your telephone number
+      phone_placeholder: Your telephone number...
+      message: "Message:"
+      message_placeholder: Write your message here...
+      enter_message: What do you want to say?
+      submit: Contact Us
+      request_contact:
+        no_email: Warning! You must supply an email address
+        email_sent: Thank you. We will be in touch shortly.

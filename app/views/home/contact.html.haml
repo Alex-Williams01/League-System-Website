@@ -1,2 +1,33 @@
-%h1 Home#contact
-%p Find me in app/views/home/contact.html.haml
+%script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"}
+ %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"}
+ %h1= t('.title')
+ %p= t('.contact_us')
+ = form_tag request_contact_path, :method => 'post', :id => 'contactform' do
+  = label_tag :name, t('.name')
+  = text_field_tag :name, '', title: t('.enter_name'), size: 50, placeholder: t('.name_placeholder')
+  = label_tag :email, t('.email')
+  = email_field_tag :email, '', title: t('.enter_email'), placeholder: t('.email_placeholder'), size: 50
+  = label_tag :telephone, t('.telephone')
+  = telephone_field_tag :telephone, '', title: t('.enter_telephone'), placeholder: t('.phone_placeholder'), size: 50
+  = label_tag :message, t('.message')
+  = text_area :message, '', title: t('.enter_message'), size: 50, placeholder:  t('.message_placeholder')
+  = submit_tag t('.submit'), :onclick => "return validation();"
+ %br/
+ %br/
+ :javascript
+   function validation() {
+   	$("#contactform").validate({
+   		rules: {
+   			name: 'required',
+   			email: {
+   				required: true,
+   				email: true
+   			},
+   			telephone: {
+   				required: true,
+   				digits: true
+   			},
+   			message: 'required'
+   		},
+   	});
+   };
