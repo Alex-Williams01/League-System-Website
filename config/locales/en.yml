@@ -30,4 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: University League
+  app_description: A university league system for competative eSports
+  home:
+    home:
+       title: Home
+       welcome: Welcome to the National University League. Here you can access fixtures, league table, players' information and team information. This is the home page where you can find details on all the pages and their functionality
+       contact_header: Contact Us
+       contact_desc: This is where you can contact us
+       fixtures_header: Fixtures
+       fixtures_desc: This is where you can access the fixtures
+       teams_header: Teams
+       teams_desc: This is where you can access all the teams, and find details about them
+       universities_header: Universities
+       universities_desc: This is where you can see a list of all the universities competing and can see their details

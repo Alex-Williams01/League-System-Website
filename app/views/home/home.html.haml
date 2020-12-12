@@ -1,2 +1,14 @@
-%h1 Home#home
-%p Find me in app/views/home/home.html.haml
+%h2= t('.title')
+%p= t('.welcome')
+
+%h3{id: "contact", onclick: "ToggleText(this)"}=t('.contact_header')
+%p#contactp=t('.contact_desc')
+
+%h3{id: "fixtures", onclick: "ToggleText(this)"}=t('.fixtures_header')
+%p#fixturesp=t('.fixtures_desc')
+
+%h3{id: "teams", onclick: "ToggleText(this)"}=t('.teams_header')
+%p#teamsp=t('.teams_desc')
+
+%h3{id: "uni", onclick: "ToggleText(this)"}=t('.universities_header')
+%p#unip=t('.universities_desc')
