@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_12_220310) do
+ActiveRecord::Schema.define(version: 2020_12_12_221730) do
 
   create_table "universities", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_universities_on_name", unique: true
   end
 
 end
