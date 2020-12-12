@@ -60,6 +60,6 @@ en:
       message_placeholder: Write your message here...
       enter_message: What do you want to say?
       submit: Contact Us
-      request_contact:
-        no_email: Warning! You must supply an email address
-        email_sent: Thank you. We will be in touch shortly.
+    request_contact:
+      no_email: Warning! You must supply an email address
+      email_sent: Thank you. We will be in touch shortly.
