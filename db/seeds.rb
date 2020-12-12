@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+seed1 = University.where(name: 'University of Surrey').first
+seed1.delete if seed1
+universities = University.create([name:'University of Surrey', address:'Stag Hill, University Campus, Guildford GU2 7XH'])
