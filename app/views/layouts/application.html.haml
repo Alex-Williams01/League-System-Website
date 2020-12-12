@@ -15,4 +15,6 @@
 
   %body
     .container-fluid
-      = yield
+      = render 'shared/header'
+      %div#main_content
+        = yield

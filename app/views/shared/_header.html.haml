@@ -1,0 +1,15 @@
+#mySidebar.sidebar
+  = image_tag("logo.png", size: "60x60", alt: "logo", :style => "border-radius: 50%;")
+  %a.closebtn{:href => "javascript:void(0)", :onclick => "closeNav()"} &times;
+  %a{:href => "/"} Home
+  %a{:href => "/"} Contact Us
+  %a{:href => "/"} Universities
+  %a{id: "accessibility", onclick: "ToggleText(this)"} Accessibility
+  %div#accessibilityp
+    %p Font size:
+    %input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
+    %input#mediumb{onclick: "SetFontSize('100%')", type: "button", value: "Medium"}
+    %input#largeb{onclick: "SetFontSize('110%')", type: "button", value: "Large"}
+  %br
+#main
+  %button.openbtn{:onclick => "openNav()"} &#9776
