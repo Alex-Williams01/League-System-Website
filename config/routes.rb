@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :teams
   resources :universities
   root 'home#home'
   get 'contact', to: 'home#contact'
