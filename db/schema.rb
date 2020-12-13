@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_131730) do
+ActiveRecord::Schema.define(version: 2020_12_13_204332) do
 
   create_table "matches", force: :cascade do |t|
     t.datetime "match_time"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 2020_12_13_131730) do
     t.float "kd", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.bigint "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["team_id"], name: "index_players_on_team_id"
   end
 
