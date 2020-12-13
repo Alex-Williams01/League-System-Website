@@ -17,4 +17,4 @@
   = @player.kd
 
 %a.btn.btn-warning{:href => edit_player_path, :role => "button"}=t('.edit')
-%a.btn.btn-danger{:href => players_path, :role => "button"}=t('.back')
+%a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')

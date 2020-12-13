@@ -40,4 +40,4 @@
         %td= link_to t('.show'), match
 
 %a.btn.btn-warning{:href => edit_team_path(@team), :role => "button"}=t('.edit')
-%a.btn.btn-danger{:href => teams_path, :role => "button"}=t('.back')
+%a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')

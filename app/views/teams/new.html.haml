@@ -2,4 +2,5 @@
 
 = render 'form'
 
-= link_to t('.back'), teams_path
+%br
+%a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')

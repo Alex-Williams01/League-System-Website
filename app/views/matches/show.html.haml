@@ -7,4 +7,4 @@
   %b= t('.teams')
   = @match.teams.map(&:name).join(', ')
 
-%a.btn.btn-danger{:href => matches_path, :role => "button"}=t('.back')
+%a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')

@@ -3,4 +3,4 @@
 = render 'form'
 %br
 %a.btn.btn-info{:href => player_path(@player), :role => "button"}=t('.show')
-%a.btn.btn-danger{:href => players_path, :role => "button"}=t('.back')
+%a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')

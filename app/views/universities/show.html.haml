@@ -18,4 +18,4 @@
         %td= link_to t('.destroy'), team, :method => :delete, :data => { :confirm => t('.confirm')}, :remote => true
 %a.btn.btn-success{:href => new_team_path(university_id: @university), :role => "button"}=t('.add')
 %a.btn.btn-warning{:href => edit_university_path(@university), :role => "button"}=t('.edit')
-%a.btn.btn-danger{:href => universities_path, :role => "button"}=t('.back')
+%a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')
