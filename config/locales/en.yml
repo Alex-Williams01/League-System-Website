@@ -92,6 +92,7 @@ en:
       add: Add Team
       back: Back
       destroy: Delete
+      confirm: Are you sure?
     index:
       show: Show
       edit: Edit
