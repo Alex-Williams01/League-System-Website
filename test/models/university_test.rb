@@ -31,4 +31,18 @@ class UniversityTest < ActiveSupport::TestCase
      uni2.save
      refute uni2.valid?
    end
+
+   test 'should not save university with no name' do
+     uni = University.new
+     uni.address = "Some Address"
+     uni.save
+     refute uni.valid?
+   end
+
+   test 'should not save university with no address' do
+     uni = University.new
+     uni.name = "My Uni"
+     uni.save
+     refute uni.valid?
+   end
 end

@@ -9,3 +9,13 @@ two:
   university: two
   name: MyString
   points: 1
+
+three:
+  university: one
+  name: MyString
+  points: 2
+
+four:
+  university: two
+  name: MyString
+  points: 3

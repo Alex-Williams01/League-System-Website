@@ -2,6 +2,8 @@
 
 one:
   match_time: 2020-12-13 13:14:09
+  teams: one, two
 
 two:
   match_time: 2020-12-13 13:14:09
+  teams: one, two

@@ -42,27 +42,7 @@ class MatchesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /matches/1
-  # PATCH/PUT /matches/1.json
-  def update
-
-    params[:match][:team_ids].each do |team_id|
-      unless team_id.empty?
-        team = Team.find(team_id)
-        @match.teams << team
-      end
-    end
-
-    respond_to do |format|
-      if @match.update(match_params)
-        format.html { redirect_to @match, notice: 'Match was successfully updated.' }
-        format.json { render :show, status: :ok, location: @match }
-      else
-        format.html { render :edit }
-        format.json { render json: @match.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # removed update action as not used
 
   # DELETE /matches/1
   # DELETE /matches/1.json

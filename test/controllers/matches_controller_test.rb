@@ -17,7 +17,7 @@ class MatchesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create match" do
     assert_difference('Match.count') do
-      post matches_url, params: { match: { match_time: @match.match_time } }
+      post matches_url, params: { match: { match_time: @match.match_time, team_ids: @match.team_ids } }
     end
 
     assert_redirected_to match_url(Match.last)
