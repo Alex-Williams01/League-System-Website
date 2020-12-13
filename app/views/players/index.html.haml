@@ -1,6 +1,7 @@
-%h1 Listing players
+%h1=t('.title')
 
-%table
+%table.table.table-hover.table-striped.table-bordered
+  %caption=t('.caption')
   %thead
     %tr
       %th=t('.team')
@@ -25,5 +26,3 @@
         %td= link_to t('.destroy'), player, method: :delete, data: { confirm: t('.confirm') }
 
 %br
-
-= link_to t('.add'), new_player_path

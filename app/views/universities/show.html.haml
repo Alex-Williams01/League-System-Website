@@ -8,7 +8,7 @@
   = @university.address
 /*create team table that loops through every team on the current university*/
 %p Teams:
-%table
+%table.table.table-hover.table-striped.table-bordered
   %tbody
     - @university.teams.each do |team|
       %tr{id: "team_#{team.id}"}

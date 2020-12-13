@@ -1,7 +1,7 @@
 = form_for @match do |f|
   - if @match.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@match.errors.count, "error")} prohibited this match from being saved:"
+      %h2= pluralize(@match.errors.count, "error") + t('.prohibited')
       %ul
         - @match.errors.full_messages.each do |message|
           %li= message
@@ -13,4 +13,4 @@
     = f.label :teams
     = collection_check_boxes(:match, :team_ids, Team.all, :id, :name, {}, {:multiple => true})
   .actions
-    = f.submit 'Save'
+    = f.submit t('.save')

@@ -1,23 +1,26 @@
-%h1 Listing teams
+.container-fluid
+  .page-header
+    %h1=t('.title')
 
-%table
-  %thead
-    %tr
-      %th=t('.university')
-      %th=t('.name')
-      %th=t('.points')
-      %th
-      %th
-      %th
-
-  %tbody
-    - @teams.each do |team|
+  %table.table.table-hover.table-striped.table-bordered
+    %caption=t('.caption')
+    %thead
       %tr
-        %td= team.university.name
-        %td= team.name
-        %td= team.points
-        %td= link_to t('.show'), team
-        %td= link_to t('.edit'), edit_team_path(team)
-        %td= link_to t('.destroy'), team, method: :delete, data: { confirm: t('.confirm') }
+        %th=t('.name')
+        %th=t('.university')
+        %th=t('.points')
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @teams.each do |team|
+        %tr
+          %td= team.name
+          %td= team.university.name
+          %td= team.points
+          %td= link_to t('.show'), team
+          %td= link_to t('.edit'), edit_team_path(team)
+          %td= link_to t('.destroy'), team, method: :delete, data: { confirm: t('.confirm') }
+
+  %br

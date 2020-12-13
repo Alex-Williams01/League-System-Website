@@ -11,16 +11,34 @@
   = @team.points
 
 %p=t('.players')
-%table
+%table.table.table-hover.table-striped.table-bordered
+  %thead
+    %tr
+      %th=t('.playername')
+      %th=t('.kd')
+      %th=t('.playtime')
+      %th
+      %th
+      %th
   %tbody
     - @team.players.each do |player|
       %tr{id: "player_#{player.id}"}
         %td= player.name
+        %td= player.kd
+        %td= player.playtime
         %td= link_to t('.show'), player
         %td= link_to t('.edit'), edit_player_path(player)
         %td= link_to t('.destroy'), player, :method => :delete, :data => {:confirm => t('.confirm')}, :remote => true
 /*links to new player to add a player to the team*/
 %p= link_to t('.add'), new_player_path(team_id: @team)
+
+%p Match Times:
+%table.table.table-hover.table-striped
+  %tbody
+    - @team.matches.each do |match|
+      %tr{id: "match_#{match.id}"}
+        %td= match.match_time
+        %td= link_to t('.show'), match
 
 = link_to t('.edit'), edit_team_path(@team)
 \|

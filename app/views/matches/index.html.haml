@@ -1,23 +1,26 @@
-%h1 Listing matches
+.container-fluid
+  .page-header
+    %h1=t('.title')
 
-%table
-  %thead
-    %tr
-      %th Match time
-      %th Team 1
-      %th Team 2
-      %th
-
-  %tbody
-    - @matches.each do |match|
+  %table.table.table-hover.table-striped.table-bordered
+    %caption=t('.caption')
+    %thead
       %tr
-        %td= match.match_time
-        %td= match.teams.map(&:name).first
-        %td= match.teams.map(&:name).second
-        %td= link_to 'Show', match
-        %td= link_to 'Edit', edit_match_path(match)
-        %td= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' }
+        %th=t('.matchtime')
+        %th=t('.team1')
+        %th=t('.team2')
+        %th
+        %th
 
-%br
+    %tbody
+      - @matches.each do |match|
+        %tr
+          %td= match.match_time
+          %td= match.teams.map(&:name).first
+          %td= match.teams.map(&:name).second
+          %td= link_to t('.show'), match
+          %td= link_to t('.destroy'), match, method: :delete, data: { confirm: t('.confirm') }
 
-= link_to 'New Match', new_match_path
+  %br
+
+  = link_to t('.newmatch'), new_match_path

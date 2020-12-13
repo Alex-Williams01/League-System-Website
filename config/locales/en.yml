@@ -36,7 +36,7 @@ en:
     header:
       home: Home
       fixtures: Fixtures
-      teams: Teams
+      teams: League Table
       universities: Universities
       other: Other
       contactus: "- Contact Us"
@@ -98,6 +98,8 @@ en:
       destroy: Delete
       newuni: New University
       confirm: 'Are you sure?'
+      title: Universities
+      caption: List of all this seasons Universities.
     update:
       update: University was successfully updated.
     create:
@@ -122,11 +124,15 @@ en:
       confirm: Are you sure?
       add: Add Player
       back: Back
-
+      playername: Playername
+      kd: KD
+      playtime: Playtime
     edit:
       show: Show
       back: Back
     index:
+      title: League Table
+      caption: List of all the teams and their current standings.
       university: University
       name: Name
       points: Points
@@ -165,3 +171,28 @@ en:
     show:
       edit: Edit
       back: Back
+  matches:
+    form:
+      prohibited: "prohibited this match from being saved:"
+      save: Save
+    edit:
+      show: Show
+      back: Back
+    index:
+      title: Fixtures
+      caption: List of matches with times and teams.
+      matchtime: Match Time
+      team1: Team 1
+      team2: Team 2
+      show: Show
+      destroy: Destroy
+      confirm: 'Are you sure?'
+      newmatch: New Match
+    new:
+      back: Back
+      newmatch: New Match
+    show:
+      matchtime: "Match time:"
+      edit: Edit
+      back: Back
+      teams: "Teams: "

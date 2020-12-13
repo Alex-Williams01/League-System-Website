@@ -1,5 +1,8 @@
-/* Title and welcome message*/
-%h2= t('.title')
-%p= t('.about-us')
-/* home page - page descriptions */
-= image_tag("founder.jpg", size: "280x360", alt: "logo")
+/*fluid bootsrap container*/
+.container-fluid
+  /*bootstrap page header*/
+  .page-header
+    %h2= t('.title')
+  /* main about us content */
+  %p= t('.about-us')
+  %img.img-thumbnail.img-fluid{:size => "10%", :alt => "founder", :src => "/assets/founder.jpg"}/

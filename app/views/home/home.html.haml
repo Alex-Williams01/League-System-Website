@@ -1,21 +1,23 @@
 /* Title and welcome message*/
-%h2= t('.title')
-%p#welcome= t('.welcome')
+.container-fluid
+  .page-header
+    %h2= t('.title')
+  %p#welcome= t('.welcome')
 
-/* home page - page descriptions */
+  /* home page - page descriptions */
 
-/*contact header and page description */
-%h3{id: "contact", onclick: "ToggleText(this)"}=t('.contact_header')
-%p#contactp=t('.contact_desc')
+  /*contact header and page description */
+  %h3{id: "contact", onclick: "ToggleText(this)"}=t('.contact_header')
+  %p#contactp=t('.contact_desc')
 
-/*fixtures header and page description */
-%h3{id: "fixtures", onclick: "ToggleText(this)"}=t('.fixtures_header')
-%p#fixturesp=t('.fixtures_desc')
+  /*fixtures header and page description */
+  %h3{id: "fixtures", onclick: "ToggleText(this)"}=t('.fixtures_header')
+  %p#fixturesp=t('.fixtures_desc')
 
-/*teams header and page description */
-%h3{id: "teams", onclick: "ToggleText(this)"}=t('.teams_header')
-%p#teamsp=t('.teams_desc')
+  /*teams header and page description */
+  %h3{id: "teams", onclick: "ToggleText(this)"}=t('.teams_header')
+  %p#teamsp=t('.teams_desc')
 
-/*university header and page description */
-%h3{id: "uni", onclick: "ToggleText(this)"}=t('.universities_header')
-%p#unip=t('.universities_desc')
+  /*university header and page description */
+  %h3{id: "uni", onclick: "ToggleText(this)"}=t('.universities_header')
+  %p#unip=t('.universities_desc')
