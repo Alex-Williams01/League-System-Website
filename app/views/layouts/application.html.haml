@@ -4,6 +4,8 @@
   %head
     %meta{'charset' => 'utf-8'}
     %meta{'http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge'}
+
+    /* sets meta data like application title, description */
     %title= t('app_title')
     %meta{'name' => 'description', 'content' => t('app_description')}
     %meta{'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1'}
@@ -15,8 +17,12 @@
 
   %body
     .container-fluid
+      /* render header partial */
       = render 'shared/header'
       %div#main_content
+        /* render flash message alerts */
         = render 'shared/flash_messages'
+        /* renders main views like home page, contact page, etc...
         = yield
+        /* renders the footer */
         = render 'shared/footer'

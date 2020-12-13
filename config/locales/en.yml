@@ -63,3 +63,11 @@ en:
     request_contact:
       no_email: Warning! You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
+  universities:
+     show:
+       edit: Edit
+       add: Add Team
+       back: Back
+       create: University was successfully created.
+       update: University was successfully updated.
+       destroy: University was successfully destroyed.

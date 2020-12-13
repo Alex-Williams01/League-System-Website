@@ -13,17 +13,17 @@
 ActiveRecord::Schema.define(version: 2020_12_12_222705) do
 
   create_table "teams", force: :cascade do |t|
-    t.integer "university_id"
-    t.string "name"
-    t.integer "points"
+    t.integer "university_id", null: false
+    t.string "name", null: false
+    t.integer "points", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["university_id"], name: "index_teams_on_university_id"
   end
 
   create_table "universities", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
+    t.string "name", null: false
+    t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_universities_on_name", unique: true

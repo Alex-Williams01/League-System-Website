@@ -8,7 +8,8 @@
 
   .field
     = f.label :university
-    = f.text_field :university
+    %p= @team.university.name
+    = f.hidden_field :university_id, value: @team.university.id
   .field
     = f.label :name
     = f.text_field :name

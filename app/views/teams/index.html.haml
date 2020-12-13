@@ -13,7 +13,7 @@
   %tbody
     - @teams.each do |team|
       %tr
-        %td= team.university
+        %td= team.university.name
         %td= team.name
         %td= team.points
         %td= link_to 'Show', team

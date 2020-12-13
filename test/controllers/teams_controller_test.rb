@@ -11,7 +11,7 @@ class TeamsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_team_url
+    get new_team_url(university_id: @team.university_id)
     assert_response :success
   end
 
