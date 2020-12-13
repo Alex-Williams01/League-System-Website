@@ -17,14 +17,21 @@
 //= require turbolinks
 //= require_tree .
 
+/* val - input size
+ changes size of all text based on value of val*/
 function SetFontSize(val) {
+  /* Loops through each html element, sets the font size of ever */
  	$("*").each(function(i,e){e.style.fontSize = val});
  }
 
+ /* elem - input text id
+  toggles text between on and off */
  function ToggleText(elem) {
- 	$('#'+elem.id+"p").toggle();
+   /* gets the element with an id of the same name + p and toggles it from on to off or vice versa */
+   $('#'+elem.id+"p").toggle();
  }
 
+ /* initially sets all p elements to hidden, these are descriptions of each page */
  $(document).ready(function() {
 
  	$('#contactp,#fixturesp,#teamsp,#unip,#accessibilityp').hide();

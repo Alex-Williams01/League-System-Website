@@ -1,0 +1,9 @@
+/for each type of flash message
+- [:notice, :error, :alert].each do |level|
+  /if value is not blank
+  - unless flash[level].blank?
+    /show a div with the class given by the function in application_helper.rb
+    %div{:class => "#{flash_class(level)}"}
+      /shows flash message content and a close button to close the flash message
+      %a.close{"data-dismiss" => "alert", :href => "#"} x
+      = content_tag :p, flash[level]

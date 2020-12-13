@@ -2,20 +2,33 @@
  %script{:src => "https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"}
  %h1= t('.title')
  %p= t('.contact_us')
+ /* Contact form, submitted to request_contact_path, RESTful post method */
  = form_tag request_contact_path, :method => 'post', :id => 'contactform' do
+  /* label tag for field (name) */
   = label_tag :name, t('.name')
+  /* input text field tag for field (name) */
   = text_field_tag :name, '', title: t('.enter_name'), size: 50, placeholder: t('.name_placeholder')
+
+  /*email label and text field */
   = label_tag :email, t('.email')
   = email_field_tag :email, '', title: t('.enter_email'), placeholder: t('.email_placeholder'), size: 50
+
+  /*phone label and text field */
   = label_tag :telephone, t('.telephone')
   = telephone_field_tag :telephone, '', title: t('.enter_telephone'), placeholder: t('.phone_placeholder'), size: 50
+
+  /* message label and text area */
   = label_tag :message, t('.message')
   = text_area :message, '', title: t('.enter_message'), size: 50, placeholder:  t('.message_placeholder')
+
+  /* submit button for the form, calls validation method in javascript */
   = submit_tag t('.submit'), :onclick => "return validation();"
  %br/
  %br/
  :javascript
+  /* validates the inputs for the form */
    function validation() {
+    /* choose the form via id to validate, sets rules like required and the format e.g. email, digits */
    	$("#contactform").validate({
    		rules: {
    			name: 'required',

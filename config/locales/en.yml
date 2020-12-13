@@ -32,6 +32,20 @@
 en:
   app_title: University League
   app_description: A university league system for competative eSports
+  shared:
+    header:
+      home: Home
+      fixtures: Fixtures
+      teams: Teams
+      universities: Universities
+      other: Other
+      contactus: "- Contact Us"
+      accessibility: "- Accessibility"
+      aboutus: "- About Us"
+      title: Alex's National League System
+      small: Small
+      medium: Medium
+      large: Large
   home:
     home:
        title: Home
@@ -64,10 +78,54 @@ en:
       no_email: Warning! You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
   universities:
-     show:
-       edit: Edit
-       add: Add Team
-       back: Back
-       create: University was successfully created.
-       update: University was successfully updated.
-       destroy: University was successfully destroyed.
+    new:
+      back: Back
+    form:
+      save: Save
+      prohibited: " prohibited this team from being saved:"
+    show:
+      show: Show
+      edit: Edit
+      add: Add Team
+      back: Back
+      destroy: Delete
+    index:
+      show: Show
+      edit: Edit
+      destroy: Delete
+      newuni: New University
+      confirm: 'Are you sure?'
+    update:
+      update: University was successfully updated.
+    create:
+      create: University was successfully created.
+    destroy:
+      destroy: University was successfully deleted.
+  teams:
+    form:
+      save: Save
+      prohibited: " prohibited this team from being saved:"
+    show:
+      edit: Edit
+      add: Add Player
+      back: Back
+    edit:
+      show: Show
+      back: Back
+    index:
+      university: University
+      name: Name
+      points: Points
+      back: Back
+      show: Show
+      edit: Edit
+      destroy: Delete
+      confirm: Are you sure?
+    new:
+      back: Back
+    update:
+      update: Team was successfully updated.
+    create:
+      create: Team was successfully created.
+    destroy:
+      destroy: Team was successfully deleted.

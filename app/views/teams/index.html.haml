@@ -3,9 +3,9 @@
 %table
   %thead
     %tr
-      %th University
-      %th Name
-      %th Points
+      %th=t('.university')
+      %th=t('.name')
+      %th=t('.points')
       %th
       %th
       %th
@@ -16,10 +16,8 @@
         %td= team.university.name
         %td= team.name
         %td= team.points
-        %td= link_to 'Show', team
-        %td= link_to 'Edit', edit_team_path(team)
-        %td= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), team
+        %td= link_to t('.edit'), edit_team_path(team)
+        %td= link_to t('.destroy'), team, method: :delete, data: { confirm: t('.confirm') }
 
 %br
-
-= link_to 'New Team', new_team_path

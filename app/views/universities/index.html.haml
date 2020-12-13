@@ -14,10 +14,10 @@
       %tr
         %td= university.name
         %td= university.address
-        %td= link_to 'Show', university
-        %td= link_to 'Edit', edit_university_path(university)
-        %td= link_to 'Destroy', university, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), university
+        %td= link_to t('.edit'), edit_university_path(university)
+        %td= link_to t('.destroy'), university, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New University', new_university_path
+= link_to t('.newuni'), new_university_path

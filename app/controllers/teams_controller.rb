@@ -58,7 +58,7 @@ class TeamsController < ApplicationController
     @team.destroy
     respond_to do |format|
       format.html { redirect_to teams_url, notice: t('.destroy') }
-      format.js { flash[:notice] = 'Task was succesfully destroyed.'}
+      format.js { flash[:notice] = t('.destroy')}
       format.json { head :no_content }
     end
   end

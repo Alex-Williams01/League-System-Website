@@ -6,16 +6,16 @@
 %p
   %b Address:
   = @university.address
-
+/*create team table that loops through every team on the current university*/
 %p Teams:
 %table
   %tbody
     - @university.teams.each do |team|
       %tr{id: "team_#{team.id}"}
         %td= team.name
-        %td= link_to 'Show', team
-        %td= link_to 'Edit', edit_team_path(team)
-        %td= link_to 'Destroy', team, :method => :delete, :data => { :confirm => 'Are you sure?'}, :remote => true
+        %td= link_to t('.show'), team
+        %td= link_to t('.edit'), edit_team_path(team)
+        %td= link_to t('.destroy'), team, :method => :delete, :data => { :confirm => t('.confirm')}, :remote => true
 %p= link_to t('.add'), new_team_path(university_id: @university)
 
 = link_to t('.edit'), edit_university_path(@university)

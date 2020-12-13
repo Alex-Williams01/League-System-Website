@@ -1,9 +1,14 @@
+/* creates a sidebar with the id mySidebar */
 #mySidebar.sidebar
+  /* display the logo in the sidebar */
   = image_tag("logo.png", size: "60x60", alt: "logo", :style => "border-radius: 50%;")
+  /* adds a close button at the top of the sidebar */
   %a.closebtn{:href => "javascript:void(0)", :onclick => "closeNav()"} &times;
+  /* page headers which link to their respective page */
   %a{:href => "/"} Home
   %a{:href => "/contact"} Contact Us
   %a{:href => "/"} Universities
+  /* header with a div that is hidden untill the text is pressed, uses same js function as home page
   %a{id: "accessibility", onclick: "ToggleText(this)"} Accessibility
   %div#accessibilityp
     %p Font size:
@@ -11,7 +16,9 @@
     %input#mediumb{onclick: "SetFontSize('100%')", type: "button", value: "Medium"}
     %input#largeb{onclick: "SetFontSize('110%')", type: "button", value: "Large"}
   %br
+
 #main
   %header
-    %h1 Alex's National League System
+    %h1=t('.title')
+    /* Button calls js function that opens the sidebar */
     %button.openbtn{:onclick => "openNav()"} &#9776
