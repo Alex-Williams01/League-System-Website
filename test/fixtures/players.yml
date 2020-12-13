@@ -2,14 +2,14 @@
 
 one:
   team: one
-  name: MyString
-  bio: MyString
+  name: MyString1
+  bio: MyBio1
   playtime: 1.5
   kd: 1.5
 
 two:
   team: two
-  name: MyString
-  bio: MyString
+  name: MyString2
+  bio: MyBio2
   playtime: 1.5
   kd: 1.5

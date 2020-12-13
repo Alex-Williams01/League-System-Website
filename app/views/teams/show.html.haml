@@ -10,6 +10,8 @@
   %b Points:
   = @team.points
 
+/*links to new player to add a player to the team*/
+%p= link_to t('.add'), new_player_path(team_id: @team)
 = link_to t('.edit'), edit_team_path(@team)
 \|
 = link_to t('.back'), teams_path

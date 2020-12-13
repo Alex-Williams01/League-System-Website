@@ -129,3 +129,25 @@ en:
       create: Team was successfully created.
     destroy:
       destroy: Team was successfully deleted.
+  players:
+    form:
+      prohibited: " prohibited this team from being saved:"
+      save: Save
+    edit:
+      show: Show
+      back: Back
+    index:
+      team: Team
+      name: Name
+      bio: Bio
+      playtime: Playtime
+      kd: KD
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      add: Add a player
+    new:
+      back: Back
+    show:
+      edit: Edit
+      back: Back

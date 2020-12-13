@@ -3,11 +3,11 @@
 %table
   %thead
     %tr
-      %th Team
-      %th Name
-      %th Bio
-      %th Playtime
-      %th Kd
+      %th=t('.team')
+      %th=t('.name')
+      %th=t('.bio')
+      %th=t('.playtime')
+      %th=t('.kd')
       %th
       %th
       %th
@@ -15,15 +15,15 @@
   %tbody
     - @players.each do |player|
       %tr
-        %td= player.team
+        %td= player.team.name
         %td= player.name
         %td= player.bio
         %td= player.playtime
         %td= player.kd
-        %td= link_to 'Show', player
-        %td= link_to 'Edit', edit_player_path(player)
-        %td= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to t('.show'), player
+        %td= link_to t('.edit'), edit_player_path(player)
+        %td= link_to t('.destroy'), player, method: :delete, data: { confirm: t('.confirm') }
 
 %br
 
-= link_to 'New Player', new_player_path
+= link_to t('.add'), new_player_path

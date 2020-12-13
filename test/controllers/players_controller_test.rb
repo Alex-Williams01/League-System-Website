@@ -11,7 +11,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_player_url
+    get new_player_url(team_id: @player.team_id)
     assert_response :success
   end
 

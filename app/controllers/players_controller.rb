@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_team, only: [:new, :create]
   # GET /players
   # GET /players.json
   def index
@@ -14,7 +14,7 @@ class PlayersController < ApplicationController
 
   # GET /players/new
   def new
-    @player = Player.new
+    @player = @team.players.new
   end
 
   # GET /players/1/edit
@@ -24,11 +24,11 @@ class PlayersController < ApplicationController
   # POST /players
   # POST /players.json
   def create
-    @player = Player.new(player_params)
+    @player = @team.players.new(player_params)
 
     respond_to do |format|
       if @player.save
-        format.html { redirect_to @player, notice: 'Player was successfully created.' }
+        format.html { redirect_to @player, notice: t('.create') }
         format.json { render :show, status: :created, location: @player }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PlayersController < ApplicationController
   def update
     respond_to do |format|
       if @player.update(player_params)
-        format.html { redirect_to @player, notice: 'Player was successfully updated.' }
+        format.html { redirect_to @player, notice: t('.update') }
         format.json { render :show, status: :ok, location: @player }
       else
         format.html { render :edit }
@@ -56,12 +56,15 @@ class PlayersController < ApplicationController
   def destroy
     @player.destroy
     respond_to do |format|
-      format.html { redirect_to players_url, notice: 'Player was successfully destroyed.' }
+      format.html { redirect_to players_url, notice: t('.destroy') }
       format.json { head :no_content }
     end
   end
 
   private
+    def set_team
+      @team = Team.find_by(id: params[:team_id]) || Team.find(player_params[:team_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_player
       @player = Player.find(params[:id])
