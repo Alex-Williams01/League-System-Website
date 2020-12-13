@@ -77,6 +77,9 @@ en:
     request_contact:
       no_email: Warning! You must supply an email address
       email_sent: Thank you. We will be in touch shortly.
+    about:
+      title: About Us
+      about-us: "This is an about us page that describes who we are. This website is a league system website used for eSports, we are the Alex's National University League you can access fixtures to find out who is competing in which matches at certain times. We have many teams from universities around the country. Our founder is Alex Williams seen below:"
   universities:
     new:
       back: Back
