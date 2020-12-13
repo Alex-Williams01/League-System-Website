@@ -22,5 +22,4 @@
           %td= link_to t('.destroy'), university, method: :delete, data: { confirm: 'Are you sure?' }
 
   %br
-
-  = link_to t('.newuni'), new_university_path
+  %a.btn.btn-success{:href => new_university_path, :role => "button"}=t('.newuni')

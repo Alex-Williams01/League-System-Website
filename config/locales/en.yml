@@ -171,6 +171,12 @@ en:
     show:
       edit: Edit
       back: Back
+    update:
+      update: Player was successfully updated.
+    create:
+      create: Player was successfully created.
+    destroy:
+      destroy: Player was successfully deleted.
   matches:
     form:
       prohibited: "prohibited this match from being saved:"
@@ -196,3 +202,9 @@ en:
       edit: Edit
       back: Back
       teams: "Teams: "
+    update:
+      update: Match was successfully updated.
+    create:
+      create: Match was successfully created.
+    destroy:
+      destroy: Match was successfully deleted.

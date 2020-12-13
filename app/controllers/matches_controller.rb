@@ -17,9 +17,7 @@ class MatchesController < ApplicationController
     @match = Match.new
   end
 
-  # GET /matches/1/edit
-  def edit
-  end
+  # removed unused action
 
   # POST /matches
   # POST /matches.json
@@ -54,7 +52,7 @@ class MatchesController < ApplicationController
         @match.teams << team
       end
     end
-    
+
     respond_to do |format|
       if @match.update(match_params)
         format.html { redirect_to @match, notice: 'Match was successfully updated.' }

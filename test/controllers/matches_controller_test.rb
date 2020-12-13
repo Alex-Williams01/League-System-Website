@@ -28,16 +28,6 @@ class MatchesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_match_url(@match)
-    assert_response :success
-  end
-
-  test "should update match" do
-    patch match_url(@match), params: { match: { match_time: @match.match_time } }
-    assert_redirected_to match_url(@match)
-  end
-
   test "should destroy match" do
     assert_difference('Match.count', -1) do
       delete match_url(@match)

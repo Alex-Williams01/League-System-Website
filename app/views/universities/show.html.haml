@@ -16,8 +16,6 @@
         %td= link_to t('.show'), team
         %td= link_to t('.edit'), edit_team_path(team)
         %td= link_to t('.destroy'), team, :method => :delete, :data => { :confirm => t('.confirm')}, :remote => true
-%p= link_to t('.add'), new_team_path(university_id: @university)
-
-= link_to t('.edit'), edit_university_path(@university)
-\|
-= link_to t('.back'), universities_path
+%a.btn.btn-success{:href => new_team_path(university_id: @university), :role => "button"}=t('.add')
+%a.btn.btn-warning{:href => edit_university_path(@university), :role => "button"}=t('.edit')
+%a.btn.btn-danger{:href => universities_path, :role => "button"}=t('.back')

@@ -22,5 +22,4 @@
           %td= link_to t('.destroy'), match, method: :delete, data: { confirm: t('.confirm') }
 
   %br
-
-  = link_to t('.newmatch'), new_match_path
+  %a.btn.btn-success{:href => new_match_path, :role => "button"} New Match

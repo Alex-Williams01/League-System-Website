@@ -30,8 +30,7 @@
         %td= link_to t('.edit'), edit_player_path(player)
         %td= link_to t('.destroy'), player, :method => :delete, :data => {:confirm => t('.confirm')}, :remote => true
 /*links to new player to add a player to the team*/
-%p= link_to t('.add'), new_player_path(team_id: @team)
-
+%a.btn.btn-success{:href => new_player_path(team_id: @team), :role => "button"}=t('.add')
 %p Match Times:
 %table.table.table-hover.table-striped
   %tbody
@@ -40,6 +39,5 @@
         %td= match.match_time
         %td= link_to t('.show'), match
 
-= link_to t('.edit'), edit_team_path(@team)
-\|
-= link_to t('.back'), team_path
+%a.btn.btn-warning{:href => edit_team_path(@team), :role => "button"}=t('.edit')
+%a.btn.btn-danger{:href => teams_path, :role => "button"}=t('.back')

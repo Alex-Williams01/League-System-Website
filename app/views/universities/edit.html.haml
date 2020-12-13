@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to t('.show'), @university
-\|
-= link_to t('.back'), universities_path
+%br
+%a.btn.btn-info{:href => university_path(@university), :role => "button"}=t('.show')
+%a.btn.btn-danger{:href => universities_path, :role => "button"}=t('.back')

@@ -1,7 +1,6 @@
 %h1 Editing player
 
 = render 'form'
-
-= link_to t('.show'), @player
-\|
-= link_to t('.back'), players_path
+%br
+%a.btn.btn-info{:href => player_path(@player), :role => "button"}=t('.show')
+%a.btn.btn-danger{:href => players_path, :role => "button"}=t('.back')
