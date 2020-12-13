@@ -46,6 +46,10 @@ en:
       small: Small
       medium: Medium
       large: Large
+      profile: Profile
+      logout: Log out
+      login: Log in
+      sign_up: Sign Up
   home:
     home:
        title: Home

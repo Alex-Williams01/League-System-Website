@@ -1,5 +1,5 @@
 /for each type of flash message
-- [:notice, :error, :alert].each do |level|
+- flash.each do |level|
   /if value is not blank
   - unless flash[level].blank?
     /show a div with the class given by the function in application_helper.rb
