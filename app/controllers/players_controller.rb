@@ -57,6 +57,7 @@ class PlayersController < ApplicationController
     @player.destroy
     respond_to do |format|
       format.html { redirect_to players_url, notice: t('.destroy') }
+      format.js {flash[:notice] = t('.destroy')}
       format.json { head :no_content }
     end
   end
