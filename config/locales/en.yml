@@ -109,6 +109,17 @@ en:
       edit: Edit
       add: Add Player
       back: Back
+      university: "Univerisity:"
+      name: "Name:"
+      points: "Points:"
+      players: "Players:"
+      show: Show
+      edit: Edit
+      destroy: Destroy
+      confirm: Are you sure?
+      add: Add Player
+      back: Back
+
     edit:
       show: Show
       back: Back

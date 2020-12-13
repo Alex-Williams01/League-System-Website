@@ -1,17 +1,27 @@
 %p#notice= notice
 
 %p
-  %b University:
+  %b= t('.university')
   = @team.university.name
 %p
-  %b Name:
+  %b=t('.name')
   = @team.name
 %p
-  %b Points:
+  %b=t('.points')
   = @team.points
 
+%p=t('.players')
+%table
+  %tbody
+    - @team.players.each do |player|
+      %tr
+        %td= player.name
+        %td= link_to t('.show'), player
+        %td= link_to t('.edit'), edit_player_path(player)
+        %td= link_to t('.destroy'), player, :method => :delete, :data => {:confirm => t('.confirm')}
 /*links to new player to add a player to the team*/
 %p= link_to t('.add'), new_player_path(team_id: @team)
+
 = link_to t('.edit'), edit_team_path(@team)
 \|
-= link_to t('.back'), teams_path
+= link_to t('.back'), team_path
