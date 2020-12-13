@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_214347) do
+ActiveRecord::Schema.define(version: 2020_12_13_215747) do
 
   create_table "matches", force: :cascade do |t|
     t.datetime "match_time"
@@ -54,7 +54,9 @@ ActiveRecord::Schema.define(version: 2020_12_13_214347) do
     t.string "address", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
     t.index ["name"], name: "index_universities_on_name", unique: true
+    t.index ["user_id"], name: "index_universities_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

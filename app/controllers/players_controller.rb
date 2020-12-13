@@ -67,6 +67,7 @@ class PlayersController < ApplicationController
     def set_team
       @team = Team.find_by(id: params[:team_id]) || Team.find(player_params[:team_id])
     end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_player
       @player = Player.find(params[:id])

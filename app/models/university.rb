@@ -5,4 +5,5 @@ class University < ApplicationRecord
   validates :name, :address, presence: true
   #validates that the name of the University is unique
   validates :name, uniqueness: true
+  belongs_to :user
 end

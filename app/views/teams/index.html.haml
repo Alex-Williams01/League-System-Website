@@ -9,9 +9,9 @@
         %th=t('.name')
         %th=t('.university')
         %th=t('.points')
-        %th
-        %th
-        %th
+        %th=t('.show')
+        %th=t('.edit')
+        %th=t('.destroy')
 
     %tbody
       - @teams.each do |team|
@@ -20,7 +20,11 @@
           %td= team.university.name
           %td= team.points
           %td= link_to t('.show'), team
-          %td= link_to t('.edit'), edit_team_path(team)
-          %td= link_to t('.destroy'), team, method: :delete, data: { confirm: t('.confirm') }
+          - if team.university.user == current_user
+            %td= link_to t('.edit'), edit_team_path(team)
+            %td= link_to t('.destroy'), team, method: :delete, data: { confirm: t('.confirm') }
+          - else
+            %td N/A
+            %td N/A
 
   %br

@@ -8,9 +8,9 @@
       %tr
         %th Name
         %th Address
-        %th
-        %th
-        %th
+        %th Show
+        %th Edit
+        %th Destroy
 
     %tbody
       - @universities.each do |university|
@@ -18,8 +18,12 @@
           %td= university.name
           %td= university.address
           %td= link_to t('.show'), university
-          %td= link_to t('.edit'), edit_university_path(university)
-          %td= link_to t('.destroy'), university, method: :delete, data: { confirm: 'Are you sure?' }
+          - if university.user == current_user
+            %td= link_to t('.edit'), edit_university_path(university)
+            %td= link_to t('.destroy'), university, method: :delete, data: { confirm: 'Are you sure?' }
+          - else
+            %td N/A
+            %td N/A
 
   %br
   %a.btn.btn-success{:href => new_university_path, :role => "button"}=t('.newuni')

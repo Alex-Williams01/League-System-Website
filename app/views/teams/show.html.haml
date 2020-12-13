@@ -25,10 +25,16 @@
         %td= player.kd
         %td= player.playtime
         %td= link_to t('.show'), player
-        %td= link_to t('.edit'), edit_player_path(player)
-        %td= link_to t('.destroy'), player, :method => :delete, :data => {:confirm => t('.confirm')}, :remote => true
+        - if @team.university.user == current_user
+          %td= link_to t('.edit'), edit_player_path(player)
+          %td= link_to t('.destroy'), player, :method => :delete, :data => {:confirm => t('.confirm')}, :remote => true
+        - else
+          %td N/A
+          %td N/A
+          
 /*links to new player to add a player to the team*/
-%a.btn.btn-success{:href => new_player_path(team_id: @team), :role => "button"}=t('.add')
+- if @team.university.user == current_user
+  %a.btn.btn-success{:href => new_player_path(team_id: @team), :role => "button"}=t('.add')
 %p Match Times:
 %table.table.table-hover.table-striped
   %tbody
@@ -36,6 +42,6 @@
       %tr{id: "match_#{match.id}"}
         %td= match.match_time
         %td= link_to t('.show'), match
-
-%a.btn.btn-warning{:href => edit_team_path(@team), :role => "button"}=t('.edit')
+- if @team.university.user == current_user
+  %a.btn.btn-warning{:href => edit_team_path(@team), :role => "button"}=t('.edit')
 %a.btn.btn-danger{:href => "javascript:history.back()", :role => "button"}=t('.back')
