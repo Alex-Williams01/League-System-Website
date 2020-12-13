@@ -9,5 +9,8 @@
   .field
     = f.label :match_time
     = f.datetime_select :match_time
+  .field
+    = f.label :teams
+    = collection_check_boxes(:match, :team_ids, Team.all, :id, :name, {}, {:multiple => true})
   .actions
     = f.submit 'Save'
