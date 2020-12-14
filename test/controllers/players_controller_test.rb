@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class PlayersControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
   setup do
     @player = players(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
